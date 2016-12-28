@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {Activity} from '../../model/Activity';
 import {ActivityService} from '../../providers/activity-service';
+import {DetailActivityPage} from '../detail-activity/detail-activity';
 
 /*
   Generated class for the MyActivityList page.
@@ -18,11 +19,18 @@ export class MyActivityListPage {
   activities: Activity[];
 
   constructor(public navCtrl: NavController, private activityService: ActivityService) {}
-
+  
   getActivities(){
      this.activityService.getActivities().then(activities => this.activities = activities);
   }
-
+  
+  /**
+   * Go to a specific activity
+   */
+  activityTapped(event, activity){
+    this.navCtrl.push(DetailActivityPage, {activity: Activity});
+  }
+   
   ionViewWillEnter() {
     this.getActivities();
   }

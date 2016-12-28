@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let act of activities">
+    <button ion-item *ngFor="let act of activities" (click)="activityTapped($event,act)">
       <ion-icon name="{{act.icon}}" item-left></ion-icon>
       {{act.title}}
 

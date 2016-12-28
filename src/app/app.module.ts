@@ -5,6 +5,8 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { MyActivityListPage } from '../pages/my-activity-list/my-activity-list';
+import {DetailActivityPage} from '../pages/detail-activity/detail-activity';
+
 import { ActivityService } from '../providers/activity-service';
 
 @NgModule({
@@ -13,7 +15,8 @@ import { ActivityService } from '../providers/activity-service';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    MyActivityListPage
+    MyActivityListPage,
+    DetailActivityPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +27,8 @@ import { ActivityService } from '../providers/activity-service';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    MyActivityListPage
+    MyActivityListPage,
+    DetailActivityPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ActivityService]
 })
