@@ -7,13 +7,37 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>DetailActivity</ion-title>
+    <ion-title>Detail Activity</ion-title>
   </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)] = "activityDet">
+      <ion-segment-button value = "submitActivity">
+        Submit
+      </ion-segment-button>
+      <ion-segment-button value = "proposedActivity">
+        Proposed
+      </ion-segment-button>
+      <ion-segment-button value = "reccomActivity">
+        Recommended
+      </ion-segment-button>
+    </ion-segment>  
+  </ion-toolbar> 
 
 </ion-header>
 
 
 <ion-content padding>
-  <h3>To complete</h3>
+  <div [ngSwitch]="activityDet">
+    <div *ngSwitchCase="'submitActivity'">
+      <h2>Make form component submit</h2>
+    </div>
+    <div *ngSwitchCase="'proposedActivity'">
+      <h2>Make form component proposed</h2>
+    </div>
+    <div *ngSwitchCase="'reccomActivity'">
+      <h2>Make form component reccommended</h2>
+    </div>
+  </div> 
 
 </ion-content>

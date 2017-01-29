@@ -13,7 +13,7 @@ import { NavController } from 'ionic-angular';
 })
 export class DetailActivityPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, private translate: TranslateService) {}
 
   ionViewDidLoad() {
     console.log('Hello DetailActivityPage Page');

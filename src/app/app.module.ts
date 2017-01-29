@@ -1,4 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import {TranslateService} from 'ng2-translate';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
@@ -30,6 +31,6 @@ import { ActivityService } from '../providers/activity-service';
     MyActivityListPage,
     DetailActivityPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ActivityService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ActivityService, TranslateService]
 })
 export class AppModule {}
